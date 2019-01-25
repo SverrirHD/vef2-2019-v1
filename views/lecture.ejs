@@ -1,0 +1,38 @@
+<html lang="en">
+<link type="text/css" id="dark-mode" rel="stylesheet" href="">
+<style type="text/css" id="dark-mode-custom-style"></style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fyrirlestur</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Roboto+Mono:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body class="lecture-page">
+    <script id="__bs_script__">//<![CDATA[
+        document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+      //]]></script>
+    <script async="" src="/browser-sync/browser-sync-client.js?v=2.26.3"></script>
+
+    <main>
+        <section class="lecture">
+            <div class="heading" style="background-image: url(&quot;img/code.jpg&quot;);"><span class="heading__category">html</span>
+                <h2 class="heading__title">Sagan</h2>
+            </div>
+            <div class="lecture__content">
+                <%- items %>
+            </div>
+            <footer class="lecture__footer"><button class="lecture__finish">Klára fyrirlestur</button><a class="lecture__back"
+                    href="/">Til baka</a></footer>
+        </section>
+    </main>
+    <script src="./dist/bundle.js"></script>
+
+
+</body>
+
+</html>

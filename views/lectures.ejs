@@ -1,0 +1,38 @@
+<%- include('header') -%>
+
+<ul class="filters">
+    <li><button data-category="html" class="filters__filter filters__filter--html">HTML</button></li>
+    <li><button data-category="css" class="filters__filter filters__filter--css">CSS</button></li>
+    <li><button data-category="javascript" class="filters__filter filters__filter--js">JavaScript</button></li>
+</ul>
+
+
+<div class="list">
+    <div class="list__row">
+        <% lectures.forEach((lecture) => { %>
+        <div class="list__col">
+            <a class="listItem" href="fyrirlestur.html?slug=<%=lecture.slug%>">
+
+                <% if (lecture.thumbnail) { %>
+                    <div class="listItem__image">
+                        <img src="<%=lecture.thumbnail%>" alt="">
+                    </div>
+                <% } else { %>
+                    <div class="listItem__image listItem__image--empty"></div>
+                <% } %>
+
+                <div class="listItem__bottom">
+                    <div class="listItem__texts"><span class="listItem__category">
+                            <%=lecture.category%></span>
+                        <h2 class="listItem__title">
+                            <%=lecture.title%>
+                        </h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <% }) %>
+    </div>
+</div>
+
+<%- include('footer') -%>
